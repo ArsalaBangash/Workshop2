@@ -1,0 +1,134 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.arsalabangash.android.androidworkshop2.ui.AddContactFragment">
+
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:hint="First Name"
+        android:maxLines="1"
+        android:shadowColor="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:hint="Last Name"
+        android:maxLines="1"
+        android:shadowColor="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/first_name" />
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:shadowColor="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/last_name" />
+
+    <TextView
+        android:id="@+id/sentiment_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Contact Sentiment"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/phone_number" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_sentiment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/sentiment_label">
+
+        <RadioButton
+            android:id="@+id/radio_happy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Happy"
+            android:textSize="14dp" />
+
+        <RadioButton
+            android:id="@+id/radio_sad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="Sad"
+            android:textSize="14dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/type_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Contact Type"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/radio_group_sentiment" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/type_label">
+
+        <RadioButton
+            android:id="@+id/radio_personal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Personal"
+            android:textSize="14dp" />
+
+        <RadioButton
+            android:id="@+id/radio_work"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="Work"
+            android:textSize="14dp" />
+    </RadioGroup>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_contact_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:src="@drawable/ic_add"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
